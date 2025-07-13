@@ -1,5 +1,3 @@
-/// <reference types="node" />
-
 const isGithubPages = process.env.GITHUB_PAGES === 'true';
 
 const nextConfig = {
@@ -8,4 +6,4 @@ const nextConfig = {
   assetPrefix: isGithubPages ? '/snappybits-website/' : '',
 };
 
-export default nextConfig; 
+module.exports = nextConfig; 
