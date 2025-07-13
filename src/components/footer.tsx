@@ -50,13 +50,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <Image 
+            <img 
               src="/snappybits-logo.png" 
               alt="SnappyBits" 
-              width={200} 
-              height={79}
+              width="200" 
+              height="79"
               className="h-12 w-auto"
-              priority
             />
             <p className="text-sm leading-6 text-gray-300">
               Empowering businesses with cutting-edge IT solutions and world-class development teams.
