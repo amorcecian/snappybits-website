@@ -23,11 +23,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build and Export
+      - name: Build
         run: |
           export GITHUB_PAGES=true
           npm run build
-          npm run export
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
