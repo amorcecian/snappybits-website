@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import React from 'react';
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -15,6 +16,7 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const basePath = typeof window === 'undefined' ? process.env.NEXT_PUBLIC_BASE_PATH || '' : (window.__NEXT_DATA__?.props?.basePath || '');
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -23,7 +25,7 @@ export default function Header() {
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">SnappyBits</span>
             <Image 
-              src="/snappybits-logo.png" 
+              src={`${basePath}/snappybits-logo.png`} 
               alt="SnappyBits" 
               width={160} 
               height={63}
@@ -69,7 +71,7 @@ export default function Header() {
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">SnappyBits</span>
                 <Image 
-                  src="/snappybits-logo.png" 
+                  src={`${basePath}/snappybits-logo.png`} 
                   alt="SnappyBits" 
                   width={160} 
                   height={63}

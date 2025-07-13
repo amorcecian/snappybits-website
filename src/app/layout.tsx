@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import React from 'react';
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
+const basePath = typeof window === 'undefined' ? process.env.NEXT_PUBLIC_BASE_PATH || '' : (window.__NEXT_DATA__?.props?.basePath || '');
 
 export const metadata: Metadata = {
   title: {
@@ -69,8 +71,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href={`${basePath}/favicon.ico`} />
+        <link rel="apple-touch-icon" href={`${basePath}/apple-touch-icon.png`} />
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={`${inter.className} antialiased`}>

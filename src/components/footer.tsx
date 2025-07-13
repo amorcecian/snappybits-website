@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import React from 'react';
 
 const navigation = {
   solutions: [
@@ -40,6 +41,7 @@ const navigation = {
 };
 
 export default function Footer() {
+  const basePath = typeof window === 'undefined' ? process.env.NEXT_PUBLIC_BASE_PATH || '' : (window.__NEXT_DATA__?.props?.basePath || '');
   return (
     <footer className="bg-snappy-navy" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
@@ -49,7 +51,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <Image 
-              src="/snappybits-logo.png" 
+              src={`${basePath}/snappybits-logo.png`} 
               alt="SnappyBits" 
               width={200} 
               height={79}
