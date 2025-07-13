@@ -1,22 +1,11 @@
-import type { NextConfig } from "next";
+/// <reference types="node" />
 
 const isGithubPages = process.env.GITHUB_PAGES === 'true';
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   output: 'export',
   basePath: isGithubPages ? '/snappybits-website' : '',
   assetPrefix: isGithubPages ? '/snappybits-website/' : '',
-  eslint: {
-    // Disable ESLint during builds for now
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    // Disable type checking during builds for now
-    ignoreBuildErrors: false,
-  },
-  experimental: {
-    optimizePackageImports: ['lucide-react'],
-  },
 };
 
-export default nextConfig;
+export default nextConfig; 
