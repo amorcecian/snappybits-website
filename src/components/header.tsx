@@ -16,7 +16,7 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  // Remove basePath logic for static assets
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -25,7 +25,7 @@ export default function Header() {
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">SnappyBits</span>
             <Image 
-              src={`${basePath}/snappybits-logo.png`} 
+              src="/snappybits-logo.png" 
               alt="SnappyBits" 
               width={160} 
               height={63}
@@ -71,7 +71,7 @@ export default function Header() {
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">SnappyBits</span>
                 <Image 
-                  src={`${basePath}/snappybits-logo.png`} 
+                  src="/snappybits-logo.png" 
                   alt="SnappyBits" 
                   width={160} 
                   height={63}

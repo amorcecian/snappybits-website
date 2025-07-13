@@ -51,7 +51,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <Image 
-              src={`${basePath}/snappybits-logo.png`} 
+              src="/snappybits-logo.png" 
               alt="SnappyBits" 
               width={200} 
               height={79}
