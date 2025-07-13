@@ -16,7 +16,7 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const basePath = typeof window === 'undefined' ? process.env.NEXT_PUBLIC_BASE_PATH || '' : (window.__NEXT_DATA__?.props?.basePath || '');
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">

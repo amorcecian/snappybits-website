@@ -41,7 +41,7 @@ const navigation = {
 };
 
 export default function Footer() {
-  const basePath = typeof window === 'undefined' ? process.env.NEXT_PUBLIC_BASE_PATH || '' : (window.__NEXT_DATA__?.props?.basePath || '');
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <footer className="bg-snappy-navy" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
