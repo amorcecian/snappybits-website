@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SnappyBits Website
+
+A modern, production-ready Next.js website for SnappyBits IT consulting.
+
+## Features
+- Next.js (latest) + TypeScript
+- Tailwind CSS for styling
+- Fully responsive, accessible, and SEO-optimized
+- Contact form (integrated with SendGrid or Netlify Forms)
+- Google Analytics (GA4) or Plausible integration
+- Structured data (JSON-LD) for SEO
+- Modern UI inspired by Nexton.dev and Tecla.io
+- LATAM Staff Augmentation section
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+
+- npm or yarn
 
+### Installation
+```bash
+cd snappybits-website
+npm install
+# or
+yarn install
+```
+
+### Development
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Linting & Formatting
+```bash
+npm run lint
+npm run format
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build & Deploy
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+Deploy to Vercel or AWS S3 + CloudFront (see `DEPLOYMENT.md`).
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
+- `src/app/` — Pages and layouts
+- `src/components/` — Reusable UI components
+- `src/lib/` — Utilities
+- `public/` — Static assets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT
